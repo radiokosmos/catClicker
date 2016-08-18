@@ -1,0 +1,23 @@
+<html>
+	<head>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		
+	</head>
+	<body>
+		<div id='sidebar' class='col-sm-3 col-md-2 sidebar'>
+			   <ul class="cat-list"></ul>
+		</div>
+		<script type="text/template" data-template="cat">
+        <li class="cat" data-id="{{id}}">
+            {{name}}
+            <img src="{{path}}"/>
+        </li>
+    </script>
+	</body>
+</html>

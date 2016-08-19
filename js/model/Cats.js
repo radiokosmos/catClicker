@@ -39,9 +39,5 @@ var model = {
 	},
 	getCatById: function(id){
 		return cat = $.grep(cats, function(e){ return e.id == id; })[0];
-	},
-	addClickToCat: function(id){
-		var cat = this.getCatByID(id);
-		cat.counter++;
 	}
 }

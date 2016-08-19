@@ -13,11 +13,11 @@
 		<div id='sidebar' class='col-sm-3 col-md-2 sidebar'>
 			   <ul class="cat-list"></ul>
 		</div>
-    <div id='catDetail' class='col-sm-9 col-md-10'>
+    <div id='catDetail' class='col-sm-9 col-md-10'></div>
     <script type="text/template" data-template="catDetail">
-        <div>
+        <div class="catDetail" id="{{id}}">
             {{name}}
-            <img src="{{path}}" height="5%" width="20%" />
+            <img src="{{path}}"  />
             {{counter}}
         </div>
     </script>

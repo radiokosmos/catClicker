@@ -12,7 +12,8 @@ var octopus = {
 		return model.getCatById(id);
 	},
 	addClickToCat: function (id) {
-		model.addClickToCat(id);
+		var cat = model.getCatById(id);
+		cat.counter++;
 		catDetailedView.render(id);
 	}
 }

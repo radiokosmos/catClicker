@@ -1,13 +1,16 @@
 var catDetailedView = {
-	init : function (id) {
+	init : function () {
 		this.$catDetail=$('#catDetail');
 		this.catDetailTemplate = $('script[data-template="catDetail"]').html();
-		this.$catDetail.on('click', 'img#'+id, function(e) {
-			octopus.addClickToCat(id);
+		this.$catDetail.on('click',  function(e) {
+			console.log(e);
+			octopus.addClickToCat(e.currentTarget.firstElementChild
+.id);
 		});
 	},
 	render: function(id) {
 		var cat = octopus.getCat(id);
+
 		this.$catDetail.html('');
 			//catDetailTemplate = this.catDetailTemplate;
 		var thisDetailTemplate = this.catDetailTemplate

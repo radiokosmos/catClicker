@@ -3,6 +3,7 @@ var octopus = {
 			model.currentCat=model.cats[0];
             catList.init();
         	catDetailedView.init();
+        	
         },
 
 	getCats: function () {
@@ -17,11 +18,17 @@ var octopus = {
 	setCurrentCat: function (cat) {
 		model.currentCat = cat; 
 		catDetailedView.render();
+		if(adminView.isShown()){
+			adminView.render();
+		}
 	},
 	addClickToCat: function () {
 		var cat = model.currentCat;
 		cat.counter++;
 		catDetailedView.render();
+		if(adminView.isShown()){
+			adminView.render();
+		}
 	},
 	setCatProperties(id, opts) {
 		for (cat in model.cats){

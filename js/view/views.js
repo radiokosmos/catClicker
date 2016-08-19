@@ -54,6 +54,12 @@ var adminView = {
 			e.preventDefault();
 			
 		});
+		this.$adminView.on('reset', function(e) {
+		
+			$('.admin-form').hide();
+			e.preventDefault();
+			
+		});
 		this.render();
 	},
 	render: function(){
@@ -63,6 +69,10 @@ var adminView = {
 			value['value'] =  cat[attr];
 		});
 	},
+	isShown: function(){
+		return ($('.admin-form').attr('dispay') !== 
+		'none');
+	}
 }
 $.fn.serializeObject = function()
 {

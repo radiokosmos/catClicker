@@ -13,11 +13,21 @@
 		<div id='sidebar' class='col-sm-3 col-md-2 sidebar'>
 			   <ul class="cat-list"></ul>
 		</div>
-		<script type="text/template" data-template="cat">
+    <div id='catDetail' class='col-sm-9 col-md-10'>
+    <script type="text/template" data-template="catDetail">
+        <div>
+            {{name}}
+            <img src="{{path}}" height="5%" width="20%" />
+            {{counter}}
+        </div>
+    </script>
+    <script type="text/template" data-template="cat">
         <li class="cat" data-id="{{id}}">
             {{name}}
-            <img src="{{path}}"/>
+            <img src="{{path}}" height="5%" width="20%" />
         </li>
     </script>
+    <script src="js/model/Cats.js"></script>
+		<script src="js/view/views.js"></script><script src="js/octopus/CatOctopus.js"></script>
 	</body>
 </html>

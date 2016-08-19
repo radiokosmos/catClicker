@@ -1,7 +1,7 @@
-var cats = [];
+
 var model = {
-	init: function () {
-		cats = [{
+		currentCat :{},
+		cats : [{
 						id : 1,
 						name : "Suzy",
 						path : "images/suzy.jpg",
@@ -31,13 +31,7 @@ var model = {
 						path : "images/suzy.jpg",
 						counter : 0 
 					},
-				];  
-	},
+				]  
+	};
 	
-	getAllCats: function(){
-		return cats;
-	},
-	getCatById: function(id){
-		return cat = $.grep(cats, function(e){ return e.id == id; })[0];
-	}
-}
+

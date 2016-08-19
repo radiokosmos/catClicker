@@ -1,20 +1,39 @@
 var octopus = {
 	init: function() {
-            model.init();
+			model.currentCat=model.cats[0];
             catList.init();
         	catDetailedView.init();
         },
 
 	getCats: function () {
-		return model.getAllCats();
+		return model.cats;
 	},
 	getCat: function (id) {
-		return model.getCatById(id);
+		return cat = $.grep(model.cats, function(e){ return e.id == id; })[0];
 	},
-	addClickToCat: function (id) {
-		var cat = model.getCatById(id);
+	getCurrentCat: function () {
+		return model.currentCat;
+	},
+	setCurrentCat: function (cat) {
+		model.currentCat = cat; 
+		catDetailedView.render();
+	},
+	addClickToCat: function () {
+		var cat = model.currentCat;
 		cat.counter++;
-		catDetailedView.render(id);
+		catDetailedView.render();
+	},
+	setCatProperties(id, opts) {
+		for (cat in model.cats){
+			if(model.cats[cat].id === id){
+				for (opt in opts){
+					model.cats[cat][opt]=opts[opt];
+				}
+			}
+		}
+		catDetailedView.render();
+
 	}
+
 }
 octopus.init();
